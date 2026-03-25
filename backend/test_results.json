@@ -1,0 +1,177 @@
+[
+  {
+    "question": "What events do I have today?",
+    "status": "FAIL",
+    "status_code": 401,
+    "error": "{\"detail\":\"Not authenticated\"}",
+    "time": 2.051483631134033
+  },
+  {
+    "question": "What's on my calendar tomorrow?",
+    "status": "FAIL",
+    "status_code": 401,
+    "error": "{\"detail\":\"Not authenticated\"}",
+    "time": 2.07824969291687
+  },
+  {
+    "question": "Show my weekly overview",
+    "status": "FAIL",
+    "status_code": 401,
+    "error": "{\"detail\":\"Not authenticated\"}",
+    "time": 2.0762901306152344
+  },
+  {
+    "question": "What do I have this week?",
+    "status": "FAIL",
+    "status_code": 401,
+    "error": "{\"detail\":\"Not authenticated\"}",
+    "time": 2.073570966720581
+  },
+  {
+    "question": "Any events next week?",
+    "status": "FAIL",
+    "status_code": 401,
+    "error": "{\"detail\":\"Not authenticated\"}",
+    "time": 2.067659616470337
+  },
+  {
+    "question": "Do I have a meeting on Friday?",
+    "status": "FAIL",
+    "status_code": 401,
+    "error": "{\"detail\":\"Not authenticated\"}",
+    "time": 2.055891275405884
+  },
+  {
+    "question": "What's scheduled for March 27?",
+    "status": "FAIL",
+    "status_code": 401,
+    "error": "{\"detail\":\"Not authenticated\"}",
+    "time": 2.077324628829956
+  },
+  {
+    "question": "List my upcoming events",
+    "status": "FAIL",
+    "status_code": 401,
+    "error": "{\"detail\":\"Not authenticated\"}",
+    "time": 2.0923850536346436
+  },
+  {
+    "question": "Show me today's schedule",
+    "status": "FAIL",
+    "status_code": 401,
+    "error": "{\"detail\":\"Not authenticated\"}",
+    "time": 2.0625643730163574
+  },
+  {
+    "question": "What meetings do I have?",
+    "status": "FAIL",
+    "status_code": 401,
+    "error": "{\"detail\":\"Not authenticated\"}",
+    "time": 2.0675127506256104
+  },
+  {
+    "question": "Add dentist appointment Friday 2pm",
+    "status": "FAIL",
+    "status_code": 401,
+    "error": "{\"detail\":\"Not authenticated\"}",
+    "time": 2.0733914375305176
+  },
+  {
+    "question": "Schedule team standup every day at 9am",
+    "status": "FAIL",
+    "status_code": 401,
+    "error": "{\"detail\":\"Not authenticated\"}",
+    "time": 2.049529552459717
+  },
+  {
+    "question": "Create meeting Monday 10am",
+    "status": "FAIL",
+    "status_code": 401,
+    "error": "{\"detail\":\"Not authenticated\"}",
+    "time": 2.0605111122131348
+  },
+  {
+    "question": "Book haircut Saturday morning",
+    "status": "FAIL",
+    "status_code": 401,
+    "error": "{\"detail\":\"Not authenticated\"}",
+    "time": 2.0674617290496826
+  },
+  {
+    "question": "Add doctor visit next week",
+    "status": "FAIL",
+    "status_code": 401,
+    "error": "{\"detail\":\"Not authenticated\"}",
+    "time": 2.048677921295166
+  },
+  {
+    "question": "What are my free slots today?",
+    "status": "FAIL",
+    "status_code": 401,
+    "error": "{\"detail\":\"Not authenticated\"}",
+    "time": 2.0571277141571045
+  },
+  {
+    "question": "When am I free this week?",
+    "status": "FAIL",
+    "status_code": 401,
+    "error": "{\"detail\":\"Not authenticated\"}",
+    "time": 2.057528257369995
+  },
+  {
+    "question": "Find me a free time tomorrow",
+    "status": "FAIL",
+    "status_code": 401,
+    "error": "{\"detail\":\"Not authenticated\"}",
+    "time": 2.0857486724853516
+  },
+  {
+    "question": "Am I busy on Friday?",
+    "status": "FAIL",
+    "status_code": 401,
+    "error": "{\"detail\":\"Not authenticated\"}",
+    "time": 2.064094066619873
+  },
+  {
+    "question": "What times are available next week?",
+    "status": "FAIL",
+    "status_code": 401,
+    "error": "{\"detail\":\"Not authenticated\"}",
+    "time": 2.08864688873291
+  },
+  {
+    "question": "What's my calendar like?",
+    "status": "FAIL",
+    "status_code": 401,
+    "error": "{\"detail\":\"Not authenticated\"}",
+    "time": 2.0795931816101074
+  },
+  {
+    "question": "Do I have anything scheduled?",
+    "status": "FAIL",
+    "status_code": 401,
+    "error": "{\"detail\":\"Not authenticated\"}",
+    "time": 2.0830764770507812
+  },
+  {
+    "question": "Show me all events",
+    "status": "FAIL",
+    "status_code": 401,
+    "error": "{\"detail\":\"Not authenticated\"}",
+    "time": 2.0523183345794678
+  },
+  {
+    "question": "What days have events?",
+    "status": "FAIL",
+    "status_code": 401,
+    "error": "{\"detail\":\"Not authenticated\"}",
+    "time": 2.0452537536621094
+  },
+  {
+    "question": "Any meetings this month?",
+    "status": "FAIL",
+    "status_code": 401,
+    "error": "{\"detail\":\"Not authenticated\"}",
+    "time": 2.059256076812744
+  }
+]

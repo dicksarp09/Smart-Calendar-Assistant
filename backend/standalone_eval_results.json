@@ -1,0 +1,100 @@
+{
+  "summary": {
+    "total_cases": 18,
+    "passed": 18,
+    "failed": 0,
+    "success_rate": 1.0
+  },
+  "results": [
+    {
+      "input": "What's on my calendar today?",
+      "expected": "get_events",
+      "actual": "get_events"
+    },
+    {
+      "input": "What's on my calendar tomorrow?",
+      "expected": "get_events",
+      "actual": "get_events"
+    },
+    {
+      "input": "Show my weekly overview",
+      "expected": "get_events",
+      "actual": "get_events"
+    },
+    {
+      "input": "Find me a free time tomorrow",
+      "expected": "get_events",
+      "actual": "get_events"
+    },
+    {
+      "input": "What's my calendar like?",
+      "expected": "get_events",
+      "actual": "get_events"
+    },
+    {
+      "input": "Show me all events",
+      "expected": "get_events",
+      "actual": "get_events"
+    },
+    {
+      "input": "What days have events?",
+      "expected": "get_events",
+      "actual": "get_events"
+    },
+    {
+      "input": "Schedule meeting tomorrow at 10am",
+      "expected": "create_event",
+      "actual": "create_event"
+    },
+    {
+      "input": "Add dentist appointment Friday 2pm",
+      "expected": "create_event",
+      "actual": "create_event"
+    },
+    {
+      "input": "Create meeting Monday 10am",
+      "expected": "create_event",
+      "actual": "create_event"
+    },
+    {
+      "input": "Book haircut Saturday morning",
+      "expected": "create_event",
+      "actual": "create_event"
+    },
+    {
+      "input": "Add doctor visit next week",
+      "expected": "create_event",
+      "actual": "create_event"
+    },
+    {
+      "input": "What do I have this week?",
+      "expected": "get_events",
+      "actual": "get_events"
+    },
+    {
+      "input": "Any events next week?",
+      "expected": "get_events",
+      "actual": "get_events"
+    },
+    {
+      "input": "Do I have a meeting on Friday?",
+      "expected": "get_events",
+      "actual": "get_events"
+    },
+    {
+      "input": "When am I free this week?",
+      "expected": "get_events",
+      "actual": "get_events"
+    },
+    {
+      "input": "Am I busy on Friday?",
+      "expected": "get_events",
+      "actual": "get_events"
+    },
+    {
+      "input": "Any meetings this month?",
+      "expected": "get_events",
+      "actual": "get_events"
+    }
+  ]
+}
