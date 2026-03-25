@@ -6,6 +6,12 @@ Run this after setting up the backend with mock credentials
 import requests
 import json
 from datetime import datetime, timedelta
+import sys
+import io
+
+# Fix Windows console encoding
+if sys.platform == 'win32':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
 # API base URL
 BASE_URL = "http://localhost:8000"
@@ -79,7 +85,7 @@ def test_agent():
 
 def run_all_tests():
     """Run all tests"""
-    print("\n🚀 Starting API Tests...\n")
+    print("\n[START] Starting API Tests...\n")
     
     tests = [
         ("Root Endpoint", test_root),
@@ -92,19 +98,19 @@ def run_all_tests():
     for name, test_func in tests:
         try:
             result = test_func()
-            results.append((name, "✅ PASSED" if result else "❌ FAILED"))
+            results.append((name, "[PASS]" if result else "[FAIL]"))
         except Exception as e:
             print(f"Error: {e}")
-            results.append((name, f"❌ ERROR: {e}"))
+            results.append((name, f"[ERROR]: {e}"))
     
     # Print summary
     print("\n" + "=" * 50)
-    print("📊 TEST SUMMARY")
+    print("[SUMMARY] TEST RESULTS")
     print("=" * 50)
     for name, result in results:
         print(f"{name}: {result}")
     
-    passed = sum(1 for _, r in results if "PASSED" in r)
+    passed = sum(1 for _, r in results if "PASS" in r)
     print(f"\nTotal: {passed}/{len(results)} tests passed")
 
 if __name__ == "__main__":
