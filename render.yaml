@@ -1,0 +1,33 @@
+services:
+  # Backend FastAPI Service
+  - type: web
+    name: calendar-backend
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11"
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false
+      - key: GOOGLE_REFRESH_TOKEN
+        sync: false
+      - key: AUTH0_DOMAIN
+        value: "dev-s62m25igz6sdix66.eu.auth0.com"
+      - key: AUTH0_AUDIENCE
+        value: "https://calendar-api"
+    region: oregon
+    plan: free
+
+  # Frontend Static Site (optional - if hosting frontend separately)
+  # Uncomment if deploying frontend to Render as static site
+  # - type: static
+  #   name: calendar-frontend
+  #   buildCommand: npm install && npm run build
+  #   publishDirectory: dist
+  #   region: oregon
+  #   plan: free
