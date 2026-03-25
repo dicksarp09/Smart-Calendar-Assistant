@@ -9,8 +9,8 @@ from httpx import AsyncClient, ASGITransport
 import sys
 import os
 
-# Add backend to path
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Add parent directory to path for imports
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 
 @pytest.fixture
@@ -25,7 +25,7 @@ async def client():
         "AUTH0_DOMAIN": "test.auth0.com",
         "AUTH0_AUDIENCE": "test-audience"
     }):
-        from backend.main import app
+        from main import app
         async with AsyncClient(transport=ASGITransport(app=app), base_url="http://test") as ac:
             yield ac
 
@@ -80,7 +80,7 @@ async def test_agent_endpoint_without_auth(client):
 async def test_agent_endpoint_with_message(client):
     """Test POST /agent with valid message"""
     # Mock the agent graph
-    with patch("backend.app.agent.graph.create_agent_graph") as mock_graph:
+    with patch("app.agent.graph.create_agent_graph") as mock_graph:
         mock_graph_instance = MagicMock()
         mock_graph_instance.ainvoke = AsyncMock(return_value={
             "messages": ["Test response"],
@@ -99,7 +99,7 @@ async def test_agent_endpoint_with_message(client):
 @pytest.mark.asyncio
 async def test_event_input_validation(client):
     """Test EventInput model validation"""
-    from backend.main import EventInput
+    from main import EventInput
     
     # Valid input
     valid_event = EventInput(
@@ -120,7 +120,7 @@ async def test_event_input_validation(client):
 @pytest.mark.asyncio
 async def test_agent_request_validation(client):
     """Test AgentRequest model validation"""
-    from backend.main import AgentRequest
+    from main import AgentRequest
     
     # Valid input
     valid_request = AgentRequest(
@@ -148,7 +148,7 @@ class TestUtils:
     
     def test_parse_date_time_with_date_only(self):
         """Test parse_date_time with date only"""
-        from backend.services.utils import parse_date_time
+        from services.utils import parse_date_time
         
         result = parse_date_time("2024-03-25")
         assert result is not None
@@ -156,7 +156,7 @@ class TestUtils:
     
     def test_parse_date_time_with_datetime(self):
         """Test parse_date_time with full datetime"""
-        from backend.services.utils import parse_date_time
+        from services.utils import parse_date_time
         
         result = parse_date_time("2024-03-25T10:00:00Z")
         assert result is not None
@@ -165,21 +165,21 @@ class TestUtils:
     
     def test_classify_intent_query(self):
         """Test intent classification for query"""
-        from backend.services.utils import classify_intent, IntentType
+        from services.utils import classify_intent, IntentType
         
         result = classify_intent("What's on my calendar?")
         assert result in [IntentType.QUERY, IntentType.ACTION]
     
     def test_classify_intent_action(self):
         """Test intent classification for action"""
-        from backend.services.utils import classify_intent, IntentType
+        from services.utils import classify_intent, IntentType
         
         result = classify_intent("Schedule a meeting")
         assert result in [IntentType.QUERY, IntentType.ACTION]
     
     def test_format_events_response(self):
         """Test format_events_response"""
-        from backend.services.utils import format_events_response
+        from services.utils import format_events_response
         
         events = [
             {
@@ -194,7 +194,7 @@ class TestUtils:
     
     def test_format_error_response(self):
         """Test format_error_response"""
-        from backend.services.utils import format_error_response
+        from services.utils import format_error_response
         
         result = format_error_response("Test error")
         assert "error" in result or "message" in result
@@ -205,7 +205,7 @@ class TestValidation:
     
     def test_validate_event_times_valid(self):
         """Test validate_event_times with valid times"""
-        from backend.services.validation import validate_event_times
+        from services.validation import validate_event_times
         
         result = validate_event_times(
             "2024-03-25T10:00:00Z",
@@ -215,7 +215,7 @@ class TestValidation:
     
     def test_validate_event_times_invalid(self):
         """Test validate_event_times with invalid times"""
-        from backend.services.validation import validate_event_times
+        from services.validation import validate_event_times
         
         # End before start should fail
         with pytest.raises(Exception):
@@ -226,7 +226,7 @@ class TestValidation:
     
     def test_validate_recurrence_rule(self):
         """Test validate_recurrence_rule"""
-        from backend.services.validation import validate_recurrence_rule
+        from services.validation import validate_recurrence_rule
         
         # Valid RRULE
         result = validate_recurrence_rule("FREQ=DAILY;COUNT=5")
