@@ -62,7 +62,7 @@ calendar-intelligence/
 └── README.md
 ```
 
-## 🔐 Authentication & Security
+##  Authentication & Security
 
 ### Auth0 Integration
 - Frontend uses Auth0 SDK for login
