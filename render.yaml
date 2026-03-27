@@ -3,11 +3,10 @@ services:
   - type: web
     name: calendar-backend
     runtime: python
+    pythonVersion: "3.11"
     buildCommand: pip install -r requirements.txt
     startCommand: cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
-      - key: PYTHON_VERSION
-        value: "3.11"
       - key: GROQ_API_KEY
         sync: false
       - key: GOOGLE_CLIENT_ID
@@ -22,12 +21,3 @@ services:
         value: "https://calendar-api"
     region: oregon
     plan: free
-
-  # Frontend Static Site (optional - if hosting frontend separately)
-  # Uncomment if deploying frontend to Render as static site
-  # - type: static
-  #   name: calendar-frontend
-  #   buildCommand: cd frontend && npm install && npm run build
-  #   publishDirectory: frontend/dist
-  #   region: oregon
-  #   plan: free
