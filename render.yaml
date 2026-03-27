@@ -3,8 +3,8 @@ services:
   - type: web
     name: calendar-backend
     runtime: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    buildCommand: cd backend && pip install -r requirements.txt
+    startCommand: cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: PYTHON_VERSION
         value: "3.11"
@@ -27,7 +27,7 @@ services:
   # Uncomment if deploying frontend to Render as static site
   # - type: static
   #   name: calendar-frontend
-  #   buildCommand: npm install && npm run build
-  #   publishDirectory: dist
+  #   buildCommand: cd frontend && npm install && npm run build
+  #   publishDirectory: frontend/dist
   #   region: oregon
   #   plan: free
