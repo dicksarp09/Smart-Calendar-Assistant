@@ -33,8 +33,8 @@ services:
       - key: VITE_AUTH0_DOMAIN
         value: "dev-s62m25igz6sdix66.eu.auth0.com"
       - key: VITE_AUTH0_CLIENT_ID
-        sync: false
+        value: "ePb4S2f1GPSsDp7gZ5UbQ2KI94kJDp3M"
       - key: VITE_AUTH0_AUDIENCE
-        value: "https://calendar-api"
+        value: "https://calendar-agent-api"
     region: oregon
     plan: free
