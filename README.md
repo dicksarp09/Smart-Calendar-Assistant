@@ -1,4 +1,4 @@
-# Calendar Intelligence - AI Calendar Agent
+# Smart Calendar Intelligence - AI Calendar Agent
 
 A production-grade AI-powered calendar application with React frontend and FastAPI backend. The system integrates Auth0 authentication, Google Calendar, and an AI agent powered by LangGraph and Groq LLM.
 
